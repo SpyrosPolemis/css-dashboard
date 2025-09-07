@@ -5,7 +5,7 @@
 
 #container {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 1fr 4fr;
 }
 
 .white {
@@ -15,6 +15,8 @@
 .big {
     height: 40px;
 }
+
+/* Sidebar */
 
 #sidebar {
     background-color: #1992d4;
@@ -48,16 +50,39 @@
     gap: 20px;
 }
 
-#sidebar .svg:not(.big) {
+.svg:not(.big) {
     height: 1.2em;
 }
+
+/* Header */
 
 #header{
     background-color: #ffffff;
     display: grid;
-    grid-template: 50% 50% / 70% 30%;
+    grid-template-columns:70% 30%;
+    align-items: center;
+    padding: 10px 32px;
+    gap: 10px;
 }
 
+#header > * {
+    display: flex;
+}
+
+#search input {
+    width: 100%;
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+}
+
+#search {
+    align-items: center;
+    gap: 10px;
+}
+
+/* Content */
 #content {
     background-color: #e2e8f0;
     display: flex;
