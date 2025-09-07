@@ -8,6 +8,14 @@
     grid-template-columns: 20% 80%;
 }
 
+.white {
+  filter: invert(1);
+}
+
+.big {
+    height: 40px;
+}
+
 #sidebar {
     background-color: #1992d4;
     color: #ffffff;
@@ -18,8 +26,9 @@
     padding: 20px;
 }
 
-#sidebar h1 {
-    font-size: 1.5rem;
+#sidebar #logo {
+    font-size: 1rem;
+    display: flex;
 }
 
 #sidebar ul {
@@ -32,13 +41,20 @@
     font-weight: 500;
 }
 
+#sidebar li {
+    display: flex;
+    gap: 20px;
+}
+
+#sidebar .svg:not(.big) {
+    height: 1.2em;
+}
+
 #header{
     background-color: #ffffff;
     display: grid;
     grid-template: 50% 50% / 70% 30%;
 }
-
-
 
 #content {
     background-color: #e2e8f0;
