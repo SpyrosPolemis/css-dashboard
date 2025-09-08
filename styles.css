@@ -137,7 +137,7 @@
 #content {
     background-color: #e2e8f0;
     display: flex;
-    gap: 10px;
+    gap: 20px;
     padding: 40px 28px;
 }
 
@@ -147,11 +147,15 @@
 }
 
 #side-content {
-    flex-grow: 3;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: space-between;
 }
 
 #projects {
-    flex-grow: 7;
+    flex: 8;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -159,9 +163,8 @@
 
 #project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    min-height: 700px;
-    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
 }
 
 .project-card {
@@ -202,4 +205,74 @@
   background-color: #facc15;
   flex: 0 0 10px;            /* fixed 10px strip */
   border-radius: 0;          /* let clipping make the curve */
+}
+
+#announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#announcement-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 36px 32px;
+    border-radius: 10px;
+    gap: 16px;
+        box-shadow: 2px 4px 8px rgba(0,0,0,0.15);
+
+}
+
+.announcement:nth-child(2n) {
+    border-bottom: #e6e6e6 solid 1px;
+    border-top: #e6e6e6 solid 1px;
+    padding: 16px 0px;
+}
+
+#announcement-card  h3 {
+    font-size: 0.9rem;
+}
+
+#announcement-card p {
+    color: #7b7b7b;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+#trending {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#trending-card {
+    background-color: #ffffff;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.15);
+    gap: 36px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.trending-section {
+    display: flex;
+    gap: 12px;
+}
+
+.announcement {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.name p:nth-child(2) {
+    color: #7b7b7b;
 }
